@@ -14,6 +14,7 @@ h1{
     animation-name: introduccion;
     animation-duration: 2s;
     font-family: 'IM Fell Double Pica SC', serif;
+    cursor: default;
 }
 @keyframes introduccion{
     0%{
@@ -53,7 +54,21 @@ h1{
     border-left: 2px solid #ce852b;
     border-right: 2px solid #ce852b;
     width: 25%;
-    
+    animation-name: desplazamientoEnlaces;
+    animation-fill-mode: forwards;
+    animation-duration: 0.2s;
+}
+@keyframes desplazamientoEnlaces{
+    0%{
+        height: 0em;
+        font-size: 0em;
+        padding: 0px;
+    }
+    100%{
+        height: 2em;
+        font-size:1em;
+        padding: 8px;
+    }
 }
 .inicio-div{
     border-left: none;
@@ -61,7 +76,7 @@ h1{
 .contactanos-div{
     border-right: none;
 }
-a{
+.a{
     align-items: center;
     font-size: 2em;
     margin: 0em;
@@ -76,16 +91,15 @@ a{
     0%{
         text-shadow: 1.5px -2px 9px #ce852b;
     }
-    50%{
+    80%{
         text-shadow: 1.5px -2px 9px #ffffff;
-        color: transparent;
+        color: rgba(255, 255, 255, 0.014);
     }
     100%{
         text-shadow: 1.5px -2px 9px #ce852b;
     }
 }
-
-a:hover{
+.a:hover{
     animation: none;
     text-shadow: 0px 5px 10px #ce852b;
 
@@ -103,6 +117,7 @@ h2{
     margin-top: 2em;
     color: #f1e4d3;
     text-shadow: 0px -3px 9px #ce852b;
+    cursor: default;
 }
 .input{
     margin: auto;
@@ -171,6 +186,7 @@ h3{
     font-size: 2.5em;
     color: #f1e4d3;
     text-shadow: 0px -3px 9px #ce852b;
+    cursor: default;
 }
 .contenedorH3YEnvios{
     display: grid;
@@ -243,4 +259,26 @@ h3{
 }
 .redAlert{
     color: #911
+}
+.quees-container{
+    width: 25em;
+    height: 15em;
+    font-size: 1.5em;
+    margin: auto;
+    margin-top: 5em;
+}
+.quees{
+    text-align: center;
+}
+.history-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.history-in{
+    font-size: 1.5em;
+    padding-top: 10px;
+}
+.history{
+    flex-basis: 30em;
 }
